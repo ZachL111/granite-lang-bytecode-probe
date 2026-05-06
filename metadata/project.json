@@ -1,0 +1,32 @@
+{
+  "index": 690,
+  "phase": 2,
+  "batch": 77,
+  "name": "granite-lang-bytecode-probe",
+  "planned_name": "granite-lang-bytecode-probe",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for bytecode workflows, centered on constraint solving, bounded scenario files, and conflict explanations.",
+  "repository_url": "https://github.com/ZachL111/granite-lang-bytecode-probe",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 180,
+    "risk_penalty": 4,
+    "latency_penalty": 3,
+    "weight_bonus": 6,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
